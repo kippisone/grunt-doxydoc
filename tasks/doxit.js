@@ -9,7 +9,8 @@
 'use strict';
 
 var path = require('path'),
-  pkg = require('../package.json');
+  fs = require('fs'),
+  pkg = require(path.join(process.cwd(), 'package.json'));
 
 var dox = require('dox');
 
@@ -52,6 +53,14 @@ module.exports = function(grunt) {
       var outFile = path.join(dest, 'doxit-v' + pkg.version + '.json');
       grunt.log.writeln('Write doxed file to', outFile);
       grunt.file.write(outFile, JSON.stringify(json, null, 4));
+
+      //Create symlink
+      var symlink = path.join(path.dirname(outFile), 'doxit-latest.json');
+      if (fs.existsSync(symlink)) {
+        fs.unlinkSync(symlink);
+      }
+
+      fs.symlinkSync(path.resolve(outFile), symlink);
     }.bind(this));
   });
 
