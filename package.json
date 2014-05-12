@@ -1,0 +1,45 @@
+{
+  "name": "grunt-doxit",
+  "description": "Create sourcecode documentation json files",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AndiOxidant/grunt-doxit",
+  "author": {
+    "name": "Andi Oxidant",
+    "email": "andi@noname-media.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndiOxidant/grunt-doxit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AndiOxidant/grunt-doxit/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/AndiOxidant/grunt-doxit/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "async": "~0.8.0",
+    "dox": "~0.4.4"
+  }
+}

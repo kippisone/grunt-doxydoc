@@ -1,0 +1,195 @@
+[
+    {
+        "file": "test/src/module1.js",
+        "data": [
+            {
+                "tags": [
+                    {
+                        "type": "module",
+                        "string": "Module I"
+                    }
+                ],
+                "description": {
+                    "full": "Module I",
+                    "summary": "Module I",
+                    "body": ""
+                },
+                "isPrivate": false,
+                "ignore": false,
+                "code": "module.exports = function() {\n\t'use strict';",
+                "ctx": {
+                    "type": "method",
+                    "receiver": "module",
+                    "name": "exports",
+                    "string": "module.exports()"
+                }
+            },
+            {
+                "tags": [
+                    {
+                        "type": "method",
+                        "string": "Module1"
+                    },
+                    {
+                        "type": "constructor",
+                        "string": ""
+                    }
+                ],
+                "description": {
+                    "full": "Module I constructor",
+                    "summary": "Module I constructor",
+                    "body": ""
+                },
+                "isPrivate": false,
+                "ignore": false,
+                "code": "var Module1 = function() {\n\n\t};",
+                "ctx": {
+                    "type": "function",
+                    "name": "Module1",
+                    "string": "Module1()"
+                }
+            },
+            {
+                "tags": [
+                    {
+                        "type": "method",
+                        "string": "foo"
+                    },
+                    {
+                        "type": "param",
+                        "types": [
+                            "Object"
+                        ],
+                        "name": "arg1",
+                        "description": "First argument"
+                    },
+                    {
+                        "type": "returns",
+                        "string": "{String} Returns \"foo\""
+                    }
+                ],
+                "description": {
+                    "full": "Foo function",
+                    "summary": "Foo function",
+                    "body": ""
+                },
+                "isPrivate": false,
+                "ignore": false,
+                "code": "Module1.prototype.foo = function(arg1) {\n\t\treturn 'foo';\n\t};",
+                "ctx": {
+                    "type": "method",
+                    "constructor": "Module1",
+                    "cons": "Module1",
+                    "name": "foo",
+                    "string": "Module1.prototype.foo()"
+                }
+            },
+            {
+                "tags": [
+                    {
+                        "type": "method",
+                        "string": "bar"
+                    },
+                    {
+                        "type": "private",
+                        "string": ""
+                    },
+                    {
+                        "type": "param",
+                        "types": [
+                            "Object"
+                        ],
+                        "name": "arg1",
+                        "description": "First argument"
+                    },
+                    {
+                        "type": "returns",
+                        "string": "{String} Returns \"bar\""
+                    }
+                ],
+                "description": {
+                    "full": "Bar function (Private)",
+                    "summary": "Bar function (Private)",
+                    "body": ""
+                },
+                "isPrivate": false,
+                "ignore": false,
+                "code": "Module1.prototype.bar = function(arg1) {\n\t\treturn 'bar';\n\t};",
+                "ctx": {
+                    "type": "method",
+                    "constructor": "Module1",
+                    "cons": "Module1",
+                    "name": "bar",
+                    "string": "Module1.prototype.bar()"
+                }
+            },
+            {
+                "tags": [
+                    {
+                        "type": "method",
+                        "string": "baz"
+                    },
+                    {
+                        "type": "protected",
+                        "string": ""
+                    },
+                    {
+                        "type": "param",
+                        "types": [
+                            "Object"
+                        ],
+                        "name": "arg1",
+                        "description": "First argument"
+                    },
+                    {
+                        "type": "returns",
+                        "string": "{String} Returns \"baz\""
+                    }
+                ],
+                "description": {
+                    "full": "Baz function (Protected)",
+                    "summary": "Baz function (Protected)",
+                    "body": ""
+                },
+                "isPrivate": false,
+                "ignore": false,
+                "code": "Module1.prototype.baz = function(arg1) {\n\t\treturn 'baz';\n\t};\n\t\n};",
+                "ctx": {
+                    "type": "method",
+                    "constructor": "Module1",
+                    "cons": "Module1",
+                    "name": "baz",
+                    "string": "Module1.prototype.baz()"
+                }
+            }
+        ]
+    },
+    {
+        "file": "test/src/module2.js",
+        "data": [
+            {
+                "tags": [],
+                "description": {
+                    "full": "",
+                    "summary": "",
+                    "body": ""
+                },
+                "isPrivate": false
+            }
+        ]
+    },
+    {
+        "file": "test/src/submodule/modelA.js",
+        "data": [
+            {
+                "tags": [],
+                "description": {
+                    "full": "",
+                    "summary": "",
+                    "body": ""
+                },
+                "isPrivate": false
+            }
+        ]
+    }
+]
