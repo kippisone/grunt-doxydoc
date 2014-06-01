@@ -15,6 +15,13 @@ module.exports = function() {
 	};
 
 	/**
+	 * My flag description
+	 * @type {Boolean}
+	 * @default true
+	 */
+	Module1.prototype.myFlag = true;
+
+	/**
 	 * Foo function
 	 * @method foo
 	 * @param {Object} arg1 First argument
@@ -44,6 +51,12 @@ module.exports = function() {
 	 */
 	Module1.prototype.baz = function(arg1) {
 		return 'baz';
+	};
+
+	/**
+	 */
+	Module1.prototype.badly = function(arg1, arg2) {
+		return 'bääh';
 	};
 	
 };

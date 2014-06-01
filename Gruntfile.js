@@ -32,6 +32,7 @@ module.exports = function(grunt) {
     doxit: {
       default_options: {
         options: {
+          beautifyCode: true
         },
         files: {
           'tmp/': ['test/src/**']

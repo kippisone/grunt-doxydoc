@@ -42,6 +42,8 @@
   ],
   "dependencies": {
     "async": "~0.8.0",
-    "dox": "~0.4.4"
+    "dox": "~0.4.4",
+    "node.extend": "~1.0.10",
+    "js-beautify": "~1.5.1"
   }
 }

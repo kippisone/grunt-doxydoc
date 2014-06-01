@@ -1,5 +1,7 @@
 /**
- * Module I
+ * Module II
+ *
+ * This is a second test module
  */
 module.exports = function() {
     'use strict';
@@ -7,7 +9,6 @@ module.exports = function() {
     /**
      * Module II constructor
      * @method Module2
-     * @constructor
      */
     var Module2 = function() {
 
