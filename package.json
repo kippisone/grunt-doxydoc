@@ -7,6 +7,7 @@
     "name": "Andi Heinkelein",
     "email": "andi.oxidant@noname-media.com"
   },
+  "main": "tasks/doxydoc.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:AndiOxidant/grunt-doxydoc.git"
@@ -38,7 +39,12 @@
     "grunt": "~0.4.0"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "doc",
+    "docu",
+    "docugenerator",
+    "jsdoc",
+    "lessdoc"
   ],
   "dependencies": {
     "doxydoc": "~0.0.0",
