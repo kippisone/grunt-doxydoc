@@ -1,6 +1,6 @@
 /*
- * grunt-doxit
- * https://github.com/AndiOxidant/grunt-doxit
+ * grunt-doxydoc
+ * https://github.com/AndiOxidant/grunt-doxydoc
  *
  * Copyright (c) 2014 Andi Heinkelein <andi.oxidant@noname-media.com>
  * Licensed under the MIT license.
@@ -11,14 +11,14 @@
 var path = require('path'),
     pkg = require(path.join(process.cwd(), 'package.json'));
 
-var Doxit = require('doxit');
+var DoxyDoc = require('doxydoc');
 
 module.exports = function(grunt) {
 
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
 
-    grunt.registerMultiTask('doxit', 'Create sourcecode documentation json files for DoxIt', function() {
+    grunt.registerMultiTask('doxydoc', 'Create source code documentation using DoxyDoc', function() {
 
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
@@ -37,19 +37,19 @@ module.exports = function(grunt) {
                 return grunt.file.isFile(file);
             });
 
-            var doxit = new Doxit();
-            var result = doxit.readFiles(files);
+            var doxydoc = new DoxyDoc();
+            var result = doxydoc.readFiles(files);
             
             if (path.extname(dest) === '.json') {
-                grunt.file.write(dest, doxit.parse('json', files));
-                grunt.log.ok('Doxit file created', dest);
+                grunt.file.write(dest, doxydoc.parse('json', files));
+                grunt.log.ok('DoxyDoc file created', dest);
             }
             else {
                 if (options.template) {
                     if (!grunt.file.exists(options.template)) {
                         grunt.log.error('Template file not found!');
                     }
-                    doxit.templateFile = options.template;
+                    doxydoc.templateFile = options.template;
                 }
 
                 var filename = 'index.html';
@@ -58,9 +58,9 @@ module.exports = function(grunt) {
                     dest = path.dirname(dest);
                 }
 
-                grunt.file.write(path.join(dest, filename), doxit.parse('html', files));
-                grunt.file.copy(path.join(path.dirname(doxit.templateFile), 'main.css'), path.join(dest, 'main.css'));
-                grunt.log.ok('Doxit file created', dest);
+                grunt.file.write(path.join(dest, filename), doxydoc.parse('html', files));
+                grunt.file.copy(path.join(path.dirname(doxydoc.templateFile), 'main.css'), path.join(dest, 'main.css'));
+                grunt.log.ok('DoxyDoc file created', dest);
             }
         }.bind(this));
     });

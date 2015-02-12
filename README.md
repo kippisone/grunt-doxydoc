@@ -1,4 +1,4 @@
-# grunt-doxit
+# grunt-doxydoc
 
 > Create sourcecode documentation json files
 
@@ -8,23 +8,23 @@ This plugin requires Grunt `~0.4.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-doxit --save-dev
+npm install grunt-doxydoc --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-doxit');
+grunt.loadNpmTasks('grunt-doxydoc');
 ```
 
-## The "doxit" task
+## The "doxydoc" task
 
 ### Overview
-In your project's Gruntfile, add a section named `doxit` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `doxydoc` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  doxit: {
+  doxydoc: {
     options: {
       // Task-specific options go here.
     },
@@ -56,7 +56,7 @@ In this example, the default options are used to do something with whatever. So 
 
 ```js
 grunt.initConfig({
-  doxit: {
+  doxydoc: {
     options: {},
     files: {
       'dest/default_options': ['src/testing', 'src/123'],
@@ -70,7 +70,7 @@ In this example, custom options are used to do something else with whatever else
 
 ```js
 grunt.initConfig({
-  doxit: {
+  doxydoc: {
     options: {
       separator: ': ',
       punctuation: ' !!!',
@@ -85,5 +85,3 @@ grunt.initConfig({
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
-## Release History
-_(Nothing yet)_
