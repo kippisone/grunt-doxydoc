@@ -1,6 +1,6 @@
 # grunt-doxydoc
 
-> Create sourcecode documentation json files
+> Create sourcecode documentation from Javascript and LESS/CSS files
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
