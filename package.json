@@ -1,7 +1,7 @@
 {
   "name": "grunt-doxydoc",
   "description": "Create sourcecode documentation using DoxyDoc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/AndiOxidant/grunt-doxydoc",
   "author": {
     "name": "Andi Heinkelein",
@@ -28,10 +28,12 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
+    "expect.js": "~0.3.1",
+    "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt": "~0.4.5"
+    "grunt-release": "^0.11.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
