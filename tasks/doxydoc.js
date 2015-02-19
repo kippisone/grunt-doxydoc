@@ -11,7 +11,7 @@
 var path = require('path'),
     pkg = require(path.join(process.cwd(), 'package.json'));
 
-var DoxyDoc = require('doxydoc');
+var DoxyDocPage = require('doxydoc').DoxyDocPage;
 
 module.exports = function(grunt) {
 
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         var options = this.options({
             name: pkg.name,
             version: pkg.version,
-            template: undefined
+            template: null
         });
 
         // Iterate over all specified file groups.
@@ -37,42 +37,16 @@ module.exports = function(grunt) {
                 return grunt.file.isFile(file);
             });
 
-            var doxydoc = new DoxyDoc();
-            var templateDir = path.join(__dirname, '../node_modules/doxydoc/templates/lagoon/');
-            
-            if (options.template) {
-                doxydoc.templateFile = options.template;
-                doxydoc.templateDir = path.dirname(options.template);
+            if (files.length) {
+                var doxydocPage = new DoxyDocPage({
+                    templateDir: options.template,
+                    output: dest
+                });
+
+                doxydocPage.verbose = true;
+                doxydocPage.files = files;
+                doxydocPage.createPages();
             }
-
-            var outDir = path.dirname(dest);
-
-            var copy = function(abspath, rootdir, subdir, file) {
-                var src, dest;
-
-                if (arguments.length === 2) {
-                    src = abspath;
-                    dest = rootdir;
-                }
-                else {
-                    if (!subdir || !/^js|lib\//.test(subdir)) {
-                        return;
-                    }
-
-                    src = abspath;
-                    dest = path.join(outDir, subdir, file);
-                }
-
-                grunt.log.ok(' ... copy', src.replace(path.join(__dirname, '..') + '/', ''));
-                grunt.file.copy(src, dest);
-            };
-            
-            grunt.log.ok('Copy docu to:', outDir);
-            grunt.file.write(dest, doxydoc.parse('html', files));
-            copy(path.join(templateDir, 'main.css'), path.join(outDir, 'main.css'));
-            grunt.file.recurse(templateDir, copy);
-            grunt.log.ok('DoxyDoc copied to:', dest);
         }.bind(this));
     });
-
 };
