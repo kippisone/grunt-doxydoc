@@ -24,7 +24,8 @@ module.exports = function(grunt) {
         var options = this.options({
             name: pkg.name,
             version: pkg.version,
-            template: null
+            template: null,
+            locals: null
         });
 
         // Iterate over all specified file groups.
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
                 return grunt.file.isFile(file);
             });
 
-            if (files.length) {
+            if (files) {
                 var doxydocPage = new DoxyDocPage({
                     templateDir: options.template,
                     output: dest

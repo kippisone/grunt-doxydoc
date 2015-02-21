@@ -42,6 +42,20 @@ Type: `String`
 
 Sets a custom template path. Uses the lagoon tempalte as default
 
+#### options.locals
+Type: `Object`
+
+Defines or overrides local variables they are passed to the templates
+
+```json
+{
+  locals: {
+    customCSS: ['my/custom.css'],
+    customJS: ['my/custom.js']
+  }
+}
+```
+
 ### Usage Examples
 
 
