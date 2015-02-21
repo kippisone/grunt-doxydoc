@@ -1,7 +1,7 @@
 {
   "name": "grunt-doxydoc",
   "description": "Create sourcecode documentation using DoxyDoc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/AndiOxidant/grunt-doxydoc",
   "author": {
     "name": "Andi Heinkelein",
