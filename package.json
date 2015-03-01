@@ -44,7 +44,11 @@
     "docu",
     "docugenerator",
     "jsdoc",
-    "lessdoc"
+    "lessdoc",
+    "cssdoc",
+    "dox",
+    "doxydoc",
+    "documentation"
   ],
   "dependencies": {
     "doxydoc": "^0.3.0"
