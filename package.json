@@ -51,6 +51,6 @@
     "documentation"
   ],
   "dependencies": {
-    "doxydoc": "^0.3.0"
+    "doxydoc": "^0.3.2"
   }
 }
