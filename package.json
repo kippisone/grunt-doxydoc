@@ -24,9 +24,6 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
   "devDependencies": {
     "expect.js": "~0.3.1",
     "grunt": "^0.4.5",
