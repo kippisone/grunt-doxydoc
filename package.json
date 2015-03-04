@@ -24,6 +24,9 @@
   "engines": {
     "node": ">= 0.8.0"
   },
+  "dependencies": {
+    "doxydoc": "^0.3.4"
+  },
   "devDependencies": {
     "expect.js": "~0.3.1",
     "grunt": "^0.4.5",
@@ -46,8 +49,5 @@
     "dox",
     "doxydoc",
     "documentation"
-  ],
-  "dependencies": {
-    "doxydoc": "^0.3.2"
-  }
+  ]
 }
