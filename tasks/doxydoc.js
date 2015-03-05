@@ -28,6 +28,8 @@ module.exports = function(grunt) {
             locals: null
         });
 
+        console.log('OP', options);
+
         // Iterate over all specified file groups.
         this.files.forEach(function(f) {
             var files = f.src,
