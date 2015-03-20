@@ -25,7 +25,8 @@ module.exports = function(grunt) {
             name: pkg.name,
             version: pkg.version,
             template: null,
-            locals: null
+            locals: null,
+            docuFilename: null
         });
 
         console.log('OP', options);
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
             if (files) {
                 var doxydocPage = new DoxyDocPage({
                     templateDir: options.template,
-                    output: dest
+                    output: dest,
+                    docuFilename: options.docuFilename
                 });
 
                 doxydocPage.verbose = true;
