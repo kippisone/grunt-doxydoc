@@ -29,8 +29,6 @@ module.exports = function(grunt) {
             docuFilename: null
         });
 
-        console.log('OP', options);
-
         // Iterate over all specified file groups.
         this.files.forEach(function(f) {
             var files = f.src,
