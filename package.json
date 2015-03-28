@@ -25,7 +25,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "doxydoc": "^0.4.1"
+    "doxydoc": "^0.4.2"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
