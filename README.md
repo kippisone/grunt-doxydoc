@@ -56,7 +56,7 @@ Type: `Object`
 
 Defines or overrides local variables they are passed to the templates
 
-```json
+```js
 {
     locals: {
         customCSS: ['my/custom.css'],
@@ -71,7 +71,7 @@ Type: `Object`
 
 Read configuration from <file> instead of doxydoc.json
 
-```json
+```js
 {
     doxydocFile: '../myproject/doxydoc.json'
 }
