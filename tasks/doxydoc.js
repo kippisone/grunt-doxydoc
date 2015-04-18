@@ -43,7 +43,9 @@ module.exports = function(grunt) {
                 var doxydocPage = new DoxyDocPage({
                     templateDir: options.template,
                     output: dest,
-                    docuFilename: options.docuFilename
+                    docuFilename: options.docuFilename,
+                    doxydocFile: options.doxydocFile,
+                    locals: options.locals
                 });
 
                 doxydocPage.verbose = true;
